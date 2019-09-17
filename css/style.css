@@ -1,6 +1,5 @@
-tei-head {
+tei-signed {
   color: red;
-  align-content: center;
 }
 tei-head::before{
 content: attr(n) ". "}

@@ -1,3 +1,6 @@
 
 tei-p::after{
 content: ">"}
+tei-signed {
+  color: red;
+}

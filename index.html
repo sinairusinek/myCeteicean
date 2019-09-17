@@ -4,7 +4,7 @@
    <title>My project</title>
    <meta charset="utf-8">
    <link rel="stylesheet" href="css/CETEIcean.css" />
-   <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="css/styleLevin.css" />
    <script src="js/CETEI.js"></script>
  </head>
  <body>
@@ -12,13 +12,17 @@
    <script>
      var CETEIcean = new CETEI()
      CETEIcean.addBehaviors({
-     "tei": {
-       "head": [ "<a href=\"http://google.com\">'/" , "</a>'" ]
+          handlers: {
+     	"persName": function(el) {
+                var a = document.createElement("a")
+                a.setAttribute("href", el.getAttribute("ref"))
+                a.innerHTML = el.innerHTML;
+                return a
+            }
+          }
+        })
 
-     }
-   })
-
-     CETEIcean.getHTML5("data/herbsttag.xml", function(data) {
+     CETEIcean.getHTML5("data/levin.xml", function(data) {
       document.getElementById("TEI").appendChild(data)
      })
    </script>
