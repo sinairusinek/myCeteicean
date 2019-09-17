@@ -1,0 +1,7 @@
+tei-head {
+  color: red;
+  align-content: center;
+}
+tei-head::before{
+content: attr(n) ". "}
+}
